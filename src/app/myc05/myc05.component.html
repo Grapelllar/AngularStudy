@@ -25,7 +25,20 @@
 <p title="{{uname}}">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt est mollitia aliquid doloremque illum consectetur quisquam sit, minus iste? Officia doloremque atque quaerat nihil sed possimus qui, exercitationem nobis maxime.</p>
 <p [title]="uname">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt est mollitia aliquid doloremque illum consectetur quisquam sit, minus iste? Officia doloremque atque quaerat nihil sed possimus qui, exercitationem nobis maxime.</p>
 
-<!-- 4.事件绑定 -->
+<!-- 3.事件绑定 -->
 <hr>
 <button (ngClick)="printfUname()" >输出用户名</button>
 <h2>hello world</h2>
+
+<!-- angular的函数必须加括号，VUE随意，React必须不写 -->
+<button (click)="jianShao()">-</button>
+<span>{{count}}</span>
+<!-- 属性绑定，内部必须是表达式！重点 -->
+<button [title]="'当前购买数：'+count" (click)="zengJia()">+</button>
+<!-- angular可以以当前组件为根做查找，如果找不到，则以app.module.ts为根查找 -->
+<img [src]="'../assets/' + imgUrl">
+
+<!-- Angular的指令系统 -->
+<!-- v-on: click取代，v-bind:[]取代 -->
+<!-- 还有v-for\v-if\v-show\v-hide\v-else\v-text\v-html...-->
+<!-- (1)循环绑定：ngFor -->

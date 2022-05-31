@@ -25,7 +25,7 @@ import { Myc05Component } from './myc05/myc05.component';
     AppRoutingModule
   ],
   providers: [],
-  //启动项
+  //启动项，引导组件，只有在这里导入才能引入index.html
   bootstrap: [AppComponent,Myc02Component]
 })
 export class AppModule { }
