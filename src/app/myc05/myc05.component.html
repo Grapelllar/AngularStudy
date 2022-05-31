@@ -1,0 +1,31 @@
+<p>myc05 works!</p>
+<hr>
+<div>用户名：{{uname}}</div>
+<div>年龄：{{age}}</div>
+<!-- 算术运算 -->
+<div>后年年龄:{{age+2}}</div>
+<!-- 比较运算 -->
+<div>{{age >= 18}}</div>
+<!-- 三目运算符 -->
+<div>{{age >= 18 ? '成年' : '未成年'}}</div>
+<!-- 逻辑运算 -->
+<div>在法定工作年龄吗：{{age >= 18 && age < 60}}</div>
+
+<div>用户名长度：{{uname.length}}</div>
+<div>用户名大写形式：{{uname.toUpperCase()}}</div>
+<div>用户名中下标为2的字符：{{uname[2]}}</div>
+
+<!-- 不允许出现new关键字！ -->
+<!-- <div>当前时间：{{new Date()}}</div> -->
+
+<!-- <div>JSON字符串：{{ JSON.stringify({})}}</div> -->
+
+
+<!-- 2.属性绑定 -->
+<p title="{{uname}}">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt est mollitia aliquid doloremque illum consectetur quisquam sit, minus iste? Officia doloremque atque quaerat nihil sed possimus qui, exercitationem nobis maxime.</p>
+<p [title]="uname">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt est mollitia aliquid doloremque illum consectetur quisquam sit, minus iste? Officia doloremque atque quaerat nihil sed possimus qui, exercitationem nobis maxime.</p>
+
+<!-- 4.事件绑定 -->
+<hr>
+<button (ngClick)="printfUname()" >输出用户名</button>
+<h2>hello world</h2>
