@@ -1,0 +1,23 @@
+<p>pipe works!</p>
+<table>
+    <tr>
+        <th>eid</th>
+        <th>ename</th>
+        <th>salary</th>
+        <th>sex</th>
+    </tr>
+       <tr *ngFor="let i of List, index as a">
+           <td>{{i.eid}}</td>
+           <td>{{i.ename}}</td>
+           <!-- <td>{{i.salary | number:'4.1-2'}}</td>
+           <td>{{i.salary | currency:'￥'}}</td> -->
+           <!-- 使用冒号给管道传参 -->
+           <!-- <td>{{i.sex | sex : 'en'}}</td>
+           <td>{{i.birthday | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+           <td><button (click) = "doDelete(a)">删除</button></td> -->
+        </tr>
+</table>
+
+<!-- 无法转JSON，用stringify，可以用管道序列化 -->
+<!-- <div>{{List}}</div>
+<div>{{List | json}}</div> -->

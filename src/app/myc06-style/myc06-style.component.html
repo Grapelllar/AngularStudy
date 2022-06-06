@@ -1,0 +1,10 @@
+<p>myc06-style works!</p>
+<button [ngStyle]="myStyleObj" (click)="loadMore()">好耶</button>
+<hr>
+
+<!-- 建议,上面那种绑定样式不易于解耦 -->
+<button [ngClass]="myClassObj" (click)="loadMore2()">再次好耶</button>
+
+<!-- *为结构型指令,会影响DOM树结构 -->
+<!-- []为属性型指令,不会影响DOM树结构,只影响元素外观和行为 -->
+
